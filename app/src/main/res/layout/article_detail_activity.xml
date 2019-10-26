@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/toolbarStyle">
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:titleTextColor="@color/white"
+                app:subtitleTextColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                style="@style/toolbarStyle">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/progressBar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/loading_gif_big"
+            android:layout_gravity="center"
+    />
+    <WebView
+            android:id="@+id/WebView"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    </WebView>
+
+</FrameLayout>

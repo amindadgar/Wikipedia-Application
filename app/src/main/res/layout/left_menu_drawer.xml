@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/drawer_Top"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            android:paddingTop="55dp"
+            android:background="@drawable/shape_rectangle_bottom_left"
+            >
+
+        <TextView
+                android:id="@+id/drawer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="22dp"
+                android:textColor="@color/white"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/drawer_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/drawer_title_description"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drawer_title"
+                android:paddingBottom="12dp"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+            android:id="@+id/HomeLinear"
+            android:layout_width="317dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_Top"
+            android:onClick="gotohome"
+            android:orientation="horizontal"
+            android:paddingLeft="24dp"
+            android:paddingTop="30dp"
+            >
+
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_home_page" />
+
+        <TextView
+                android:id="@+id/GoHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:text="@string/Home"
+                android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/settingLinear"
+                  app:layout_constraintTop_toBottomOf="@+id/HomeLinear"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  android:layout_marginTop="10dp"
+                  android:baselineAligned="false"
+                  android:orientation="horizontal"
+                  android:contentDescription="@string/home_drawer_image"
+                  android:paddingLeft="24dp"
+                  android:onClick="gotosetting"
+                  android:paddingTop="30dp"
+                  android:paddingRight="200dp">
+        <ImageView android:layout_width="30dp"
+                   android:layout_height="30dp"
+                android:contentDescription="@string/setting_image"
+                   android:src="@drawable/icon_gears"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="6dp"
+                  android:text="@string/setting"
+                  android:layout_marginLeft="12dp"
+                  android:layout_gravity="center_vertical"
+                  android:textStyle="bold"
+        />
+
+    </LinearLayout>
+
+    <RelativeLayout
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:background="@drawable/shape_rectangle_top_left"
+            android:layout_height="106dp"
+            android:layout_gravity="bottom"
+           >
+
+        <AnalogClock
+                android:id="@+id/Clock"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="2dp"
+                android:layout_toEndOf="@+id/Clock"
+                android:text="fully developed by Amin Dadgar"
+                android:textColor="@color/background" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

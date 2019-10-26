@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.amindadgar.intowikipedia">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+            android:name="application.WikiApplication"
+            android:allowBackup="true"
+            android:icon="@drawable/appicon"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/appicon"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".Activities.AboutActivity"></activity>
+
+        <receiver android:name=".Activities.mAlarmReciever" />
+
+        <activity
+                android:name=".Activities.SettingsActivity"
+                android:label="@string/title_activity_settings"
+                android:theme="@style/PreferenceActivity"></activity>
+        <activity android:name=".Activities.SearchActivity"></activity>
+        <activity
+                android:name=".Activities.MainActivity"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.Article_detail_Activity" />
+    </application>
+
+</manifest>

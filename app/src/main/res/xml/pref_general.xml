@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+            android:key="Goback"
+            android:layout="@layout/setting_back_item_layout"/>
+    <PreferenceCategory
+            android:textStyle="bold"
+            android:title="Application Control">
+        <SwitchPreference
+                android:defaultValue="false"
+                android:key="offline_switch"
+                android:summary="@string/pref_offline_description"
+                android:title="@string/pref_offline" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/Explore_layout_manager"
+            android:entryValues="@array/Explore_layout_manager_values"
+            android:key="layoutmanager"
+            android:title="Layout Manager"
+            android:summary="Choose items view in explore page by your choice"/>
+        <ListPreference
+                android:defaultValue="-1"
+                android:entries="@array/pref_notification_time"
+                android:entryValues="@array/pref_notification_time_values"
+                android:key="notificationList"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/pref_title_send_message_description"
+                android:title="@string/pref_title_send_message" />
+    </PreferenceCategory>
+    <PreferenceCategory
+            android:textStyle="bold"
+            android:title="About">
+
+        <Preference
+                android:key="FAQ"
+                android:summary="Have any questions?.I'm glad to help"
+                android:title="FAQ" />
+        <Preference
+                android:key="About"
+                android:title="About" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

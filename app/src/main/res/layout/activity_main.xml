@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:paddingBottom="70dp"
+            android:background="@color/white">
+    </android.support.constraint.ConstraintLayout>
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:elevation="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@drawable/shape_rectangle">
+        <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/Explore_Navigation"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_icon="@drawable/baseline_explore_black"
+                app:bt_colorActive="@color/colorPrimary"
+                app:bt_colorInactive="@android:color/darker_gray"
+                app:bt_title="@string/title_explore"
+        />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/Favourite_Navigation"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_icon="@drawable/icon_heart_filled_dark"
+                app:bt_colorActive="@android:color/holo_red_dark"
+                app:bt_colorInactive="@android:color/darker_gray"
+                app:bt_title="@string/title_favourite"
+        />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/History_Navigation"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_icon="@drawable/baseline_history_black"
+                app:bt_colorActive="@android:color/holo_green_dark"
+                app:bt_colorInactive="@android:color/darker_gray"
+                app:bt_title="@string/title_history"
+        />
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_explore"
+            android:icon="@drawable/baseline_explore_black"
+            android:title="@string/title_explore"/>
+
+    <item
+            android:id="@+id/navigation_favourite"
+            android:icon="@drawable/baseline_favorite_border_black"
+            android:title="@string/title_favourite"/>
+
+    <item
+            android:id="@+id/navigation_history"
+            android:icon="@drawable/baseline_history_black"
+            android:title="@string/title_history"/>
+
+</menu>
